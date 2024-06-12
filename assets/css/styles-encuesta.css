@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'FontRegular';
+    src: url('../font/Flama-Regular.otf') format('opentype');
+}
+
+body {
+    background-image: url('../img/background_principal.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Evita que el body tenga scroll */
+    font-family: 'FontRegular', sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.logo-container img {
+    max-width: 200px;
+}
+
+.content-encuesta {
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.pregunta {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+.preguntas {
+    text-align: center;
+}
+
+.rate-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+    gap: 100px;
+}
+
+.rate.faces {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rate.faces input[type="radio"] {
+    display: none;
+}
+
+.rate.faces svg path {
+    fill: #A8A8A8;
+    transition: fill 0.3s ease;
+}
+
+.rate.faces input[type="radio"]:checked + svg path {
+    fill: #D22D28;
+}
+
+.rate.faces:hover svg path {
+    fill: #D22D28;
+}
+
+
+.button-si, .button-no {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.button-si{
+    width: 200px;
+    height: 200px;
+    margin: 40px 25px 100px 47px;
+    padding: 45px 25px 46px;
+    object-fit: contain;
+    border: solid 4px #b6ce3a;
+    background-color: #fff;
+    color: #b6ce3a;
+    font-family: 'FontRegular', sans-serif; /* Aplicar la fuente personalizada */
+}
+
+.button-no{
+    width: 200px;
+    height: 200px;
+    margin: 40px 47px 100px 25px;
+    padding: 45px 25px 46px;
+    object-fit: contain;
+    border: solid 4px #d22d28;
+    background-color: #fff;
+    color: #D22D28;
+    font-family: 'FontRegular', sans-serif; /* Aplicar la fuente personalizada */
+}
+
+.button-si:hover, .button-si:active, .button-si:focus {
+    color: #fff;
+    border-color: #B6CE3A;
+    background: #B6CE3A;
+}
+
+.button-no:hover, .button-no:active, .button-no:focus {
+    color: #fff;
+    border-color: #D22D28;
+    background: #D22D28;
+}
+
+.button-si:hover svg path, .button-si:active svg path, .button-si:focus svg path {
+    fill: #FFFFFF;
+}
+
+.button-no:hover svg path, .button-no:active svg path, .button-no:focus svg path {
+    fill: #FFFFFF;
+}
+
+.svg-si, .svg-no {
+    margin-bottom: 5px;
+}
+
+.button-si svg, .button-no svg {
+    margin-bottom: 25px;
+    
+}
+
+.pregunta-2{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+.btn-enviar{
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 250px;
+    height: 85px;
+    margin: 0 46px 0 0;
+    padding: 30px 50px 29px;
+    object-fit: contain;
+    background-color: #d22d28;
+    font-family: 'FontRegular', sans-serif; /* Aplicar la fuente personalizada */
+}
+
+.btn-enviar:hover {
+    background-color: #AD2420;
+}

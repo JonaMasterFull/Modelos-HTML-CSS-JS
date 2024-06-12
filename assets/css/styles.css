@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'FontRegular';
+    src: url('../font/Flama-Regular.otf') format('opentype');
+}
+
+body {
+    background-image: url('../img/background_principal.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'FontRegular', sans-serif; /* Aplicar la fuente al body */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho de la página */
+}
+
+.titulo-inicio {
+    font-size: 20px; /* Asegúrate de que .titulo-inicio sea una clase de h1 */
+    margin-bottom: 30px;
+    font-family: 'FontRegular', sans-serif; /* Aplicar la fuente personalizada */
+}
+
+.btn-principal {
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 250px;
+    height: 85px;
+    margin: 0 46px 0 0;
+    padding: 30px 50px 29px;
+    object-fit: contain;
+    background-color: #d22d28;
+    font-family: 'FontRegular', sans-serif; /* Aplicar la fuente personalizada */
+}
+
+.btn-principal:hover {
+    background-color: #AD2420;
+}
+
+
